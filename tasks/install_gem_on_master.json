@@ -5,6 +5,6 @@
     "parameters": {
      },
     "implementations" : [
-      {"name": "the_big_sleep.sh", "requirements": ["shell"]}
+      {"name": "install_gem_on_master.sh", "requirements": ["shell"]}
     ]
   }
