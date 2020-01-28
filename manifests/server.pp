@@ -7,7 +7,7 @@
 class pmp::server (
   String  $linux_server_installer_url = 'https://www.manageengine.com/products/passwordmanagerpro/8621641/ManageEngine_PMP_64bit.bin',
   String  $windows_server_installer_url = 'https://www.manageengine.com/products/passwordmanagerpro/8621641/ManageEngine_PMP.exe',
-  String  $linux_curl_options = '-Lf',
+  String  $linux_curl_options = '-LfOk',
   String  $linux_curl_cmd = '/bin/curl',
   Integer $jvmxms = 0,
   Integer $jvmxmx = 0,
