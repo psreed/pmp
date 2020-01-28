@@ -10,7 +10,7 @@ class pmp::test (
   notify { 'testing': }
 
   notify { 'Structured Data':
-    message => pmp::get_account_details($host, $token, $certificate_path, $port, $resource_name, $account_name)
+    message => get_account_details($host, $token, $certificate_path, $port, $resource_name, $account_name)
   }
 
 }
