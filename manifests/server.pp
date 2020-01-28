@@ -17,6 +17,6 @@ class pmp::server (
     exec { 'PMP curl pipe bash installation':
       command => "${linux_curl_cmd} ${linux_curl_options} ${linux_server_installer_url} | /bin/sh -s -- -i silent",
     }
-    notify('testing')
+    notice('testing')
   }
 }
