@@ -4,7 +4,9 @@
 #
 # @example
 #   include pmp
-class pmp (
+class pmp::agent (
+  String $linux_agent_installer_url = '',
+  String $windows_agent_installer_url = '',
 ){
   notify('testing')
 }
