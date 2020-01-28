@@ -1,0 +1,10 @@
+{
+    "puppet_task_version": 1,
+    "supports_noop": false,
+    "description": "Installs the Password Manager Pro Ruby gem on a Puppet Master server.",
+    "parameters": {
+     },
+    "implementations" : [
+      {"name": "the_big_sleep.sh", "requirements": ["shell"]}
+    ]
+  }
