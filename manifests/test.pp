@@ -8,7 +8,7 @@ class pmp::test (
   Integer $port = 7272,
 ){
 
-  $data = get_account_details($host, $token, $certificate_path, $port, $resource_name, $account_name)
+  $data = pmp::get_account_details($host, $token, $certificate_path, $port, $resource_name, $account_name)
 
   $content = inline_template("
 <%- require 'json' -%>
