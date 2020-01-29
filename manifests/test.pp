@@ -10,11 +10,6 @@ class pmp::test (
 
   $data = pmp::get_account_details($host, $token, $certificate_path, $port, $resource_name, $account_name)
 
-  $content = inline_template("
-<%- require 'json' -%>
-<%= JSON.pretty_generate(@data) %>
-")
-
-  notify { 'Result': message => $content }
+  notify { 'Result': message => $data }
 
 }
