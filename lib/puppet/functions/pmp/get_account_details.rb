@@ -17,7 +17,7 @@ Puppet::Functions.create_function(:'pmp::get_account_details') do
     def gc(host,token,path,port,resource,account,ssl)
         begin 
             gemData = PasswordManagerProGem.new(host,token,path,port)
-            gemData.disable_ssl = ssl
+            gemData.disable_ssl = !ssl
             result = gemData.getAccountDetails(resource,account)
         rescue => err
             result = err
