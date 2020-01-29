@@ -1,6 +1,6 @@
 # Test the PMP Integration
 class pmp::test (
-  String $certificate_path = '',
+  String $certificate_path = '/home/local/user/servercertificate',
   String $resource_name = 'TestResource',
   String $account_name = 'sysadmin',
   String $host = 'skynetnix1.classroom.puppet.com',
