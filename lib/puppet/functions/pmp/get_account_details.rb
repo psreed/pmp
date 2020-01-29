@@ -21,6 +21,7 @@ Puppet::Functions.create_function(:'pmp::get_account_details') do
         rescue
             result = "We encountered and error."
 #        result = {"RESOURCE_ID":1,"RESOURCE_NAME":"Windows","RESOURCE_DESCRIPTION":"","OPERATINGSYSTEM":"Windows","DNSNAME":"","DEPARTMENT":"","LOCATION":"","RESOURCE_URL":""}
+        end
     end
     result
 end
