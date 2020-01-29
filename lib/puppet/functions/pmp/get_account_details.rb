@@ -13,7 +13,7 @@ Puppet::Functions.create_function(:'pmp::get_account_details') do
     end
 
     result = {}
-    def gc(pmp_host,pmp_token,path,port,resource,account)
+    def gc(host,token,path,port,resource,account)
         gemData = PasswordManagerProGem.new(host,token,path,port)
         result = gemData.getAccountDetails(resource,account)
     end
