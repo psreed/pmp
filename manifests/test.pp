@@ -7,10 +7,14 @@ class pmp::test (
   String $token = 'F7B3FB07-6E62-400B-940F-6CFB44DE850D',
   Integer $port = 7272,
 ){
-  notify { 'testing': }
 
-  notify { 'Structured Data':
-    message => get_account_details($host, $token, $certificate_path, $port, $resource_name, $account_name)
-  }
+  $data = pmp::get_account_details($host, $token, $certificate_path, $port, $resource_name, $account_name)
+
+  $content = inline_template("
+<%- require 'json' -%>
+<%= JSON.pretty_generate(@hash) %>
+")
+
+  notice($content)
 
 }
