@@ -6,10 +6,19 @@ class pmp::test (
   Integer $port = 7272,
   String $resource_name = 'TestResource',
   String $account_name = 'sysadmin',
+  Boolean $ssl = false,
 ){
 
-  $data = pmp::get_account_details($host, $token, $certificate_path, $port, $resource_name, $account_name)
+  $account_details = pmp::get_account_details($host, $token, $certificate_path, $port, $resource_name, $account_name, $ssl)
 
-  notify { 'Result': message => $data }
+  notify { 'Account Details':
+    message => "Account Details: ${account_details}",
+  }
+
+  $account_password = pmp::get_account_password($host, $token, $certificate_path, $port, $resource_name, $account_name, $ssl)
+
+  notify { 'Account Password':
+    message => "Account Password: ${account_password}",
+  }
 
 }

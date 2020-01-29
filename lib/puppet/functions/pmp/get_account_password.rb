@@ -2,7 +2,7 @@
 gem 'PasswordManagerPro_Gem'
 require 'PasswordManagerPro_Gem'
 
-Puppet::Functions.create_function(:'pmp::get_account_details') do
+Puppet::Functions.create_function(:'pmp::get_account_password') do
     dispatch :gc do
         param 'String',  :host
         param 'String',  :token
@@ -18,7 +18,7 @@ Puppet::Functions.create_function(:'pmp::get_account_details') do
         begin 
             gemData = PasswordManagerProGem.new(host,token,path,port)
             gemData.disable_ssl = ssl
-            result = gemData.getAccountDetails(resource,account)
+            result = gemData.getAccountPassword(resource,account)
         rescue => err
             result = err
         end
