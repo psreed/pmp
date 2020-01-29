@@ -15,6 +15,7 @@ class pmp::test (
 <%= JSON.pretty_generate(@data) %>
 ")
 
+  notice($data)
   notice($content)
 
 }
