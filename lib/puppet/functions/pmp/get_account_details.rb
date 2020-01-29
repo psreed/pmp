@@ -17,7 +17,7 @@ Puppet::Functions.create_function(:'pmp::get_account_details') do
 
 #        gemData = PasswordManagerProGem.new(host,token,path,port)
 #        result = gemData.getAccountDetails(resource,account)
-        result = { "testing 1", "testing 2" }
+        result = {"RESOURCE_ID":1,"RESOURCE_NAME":"Windows","RESOURCE_DESCRIPTION":"","OPERATINGSYSTEM":"Windows","DNSNAME":"","DEPARTMENT":"","LOCATION":"","RESOURCE_URL":""}
     end
     result
 end
