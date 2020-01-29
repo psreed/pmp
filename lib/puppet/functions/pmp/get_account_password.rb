@@ -13,14 +13,14 @@ Puppet::Functions.create_function(:'pmp::get_account_password') do
         param 'Boolean', :ssl
     end
 
-    result = {}
     def gc(host,token,path,port,resource,account,ssl)
         begin 
             gemData = PasswordManagerProGem.new(host,token,path,port)
             gemData.disable_ssl = !ssl
             result = gemData.getAccountPassword(resource,account)
+            result
         rescue => err
-            result = err
+            err
         end
     end
     result
