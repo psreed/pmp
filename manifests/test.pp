@@ -12,7 +12,7 @@ class pmp::test (
 
   $content = inline_template("
 <%- require 'json' -%>
-<%= JSON.pretty_generate(@hash) %>
+<%= JSON.pretty_generate(@data) %>
 ")
 
   notice($content)
