@@ -23,5 +23,4 @@ Puppet::Functions.create_function(:'pmp::get_account_password') do
             err
         end
     end
-    result
 end
