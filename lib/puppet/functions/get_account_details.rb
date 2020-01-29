@@ -2,7 +2,7 @@
 #require 'PasswordManagerPro_Gem'
 #gemData = PasswordManagerProGem.new("localhost","060CCDB8-71A0-4B8B-AC57-XXXXX","/home/local/user/servercertificate")
 
-Puppet::Functions.create_function(:'pmp::get_account_details') do
+Puppet::Functions.create_function(:'get_account_details') do
     dispatch :gc do
         param 'String',  :host
         param 'String',  :token
